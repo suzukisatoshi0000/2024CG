@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
  <meta charset="UTF-8">
- <title>タイトル5</title>
+ <title>タイトル6</title>
  <!-- three.jsを読み込む(ローカル) -->
  <!-- <script src="./three.js"></script> -->
  <!-- three.jsを読み込む(CDN) -->
@@ -27,7 +27,7 @@
 		camera.lookAt(0,0,0);
 		
 		// 光源
-		var pointLight = new THREE.PointLight(0xffffff, 4, 30, Math.PI / 4, 10, 0.5);
+		var pointLight = new THREE.PointLight(0xffffff, 2, 50, 1.0);
 		pointLight.position.set(0, 0, 3);
 		scene.add(pointLight);
 		pointLight.position.set(3, 0, 0);
