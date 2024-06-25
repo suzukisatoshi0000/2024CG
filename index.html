@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
  <meta charset="UTF-8">
- <title>タイトル1</title>
+ <title>タイトル2</title>
  <!-- three.jsを読み込む(ローカル) -->
  <!-- <script src="./three.js"></script> -->
  <!-- three.jsを読み込む(CDN) -->
@@ -46,8 +46,8 @@
 		var update = function(){
 			requestAnimationFrame(update);
 			// 箱を回転させる
-			group.rotation.x += 0.01;
-			group.rotation.y += 0.01;
+			group1.rotation.x += 0.01;
+			group1.rotation.y += 0.01;
 			renderer.render(scene, camera);
 		};
 		update();
