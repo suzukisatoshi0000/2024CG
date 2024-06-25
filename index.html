@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
  <meta charset="UTF-8">
- <title>タイトル2</title>
+ <title>タイトル3</title>
  <!-- three.jsを読み込む(ローカル) -->
  <!-- <script src="./three.js"></script> -->
  <!-- three.jsを読み込む(CDN) -->
@@ -28,7 +28,7 @@
 		
 		// 平行光源
 		var directionalLight = new THREE.DirectionalLight(0xffffff);
-		directionalLight.position.set(1, 1, 1);
+		directionalLight.position.set(2, 2, 2);
 		scene.add(directionalLight);
 
 		//group
@@ -54,6 +54,7 @@
 			// 箱を回転させる
 			group.rotation.x += 0.01;
 			group.rotation.y += 0.01;
+			box2.rotation.y += 0.02
 			renderer.render(scene, camera);
 		};
 		update();
