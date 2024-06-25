@@ -32,14 +32,14 @@
 		scene.add(directionalLight);
 
 		//group
-		var group = new THREE.Group();
+		const group = new THREE.Group();
 		scene.add(group);
 		
-		var geometry = new THREE.BoxGeometry(0.1, 0.1, 0.1);
-		var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-		var box = new THREE.Mesh(geometry, material);
+		const geometry = new THREE.BoxGeometry(1, 1, 1);
+		const material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+		const box = new THREE.Mesh(geometry, material);
 		box.position.set(1,1,1);
-		scene.add(box);
+		group.add(box)
 
 		
 		var update = function(){
