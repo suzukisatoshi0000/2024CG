@@ -42,7 +42,7 @@
 		scene.add(group);
 		
 		const geometry1 = new THREE.BoxGeometry(2, 3, 3);
-		const material1 = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+		const material1 = new THREE.MeshLambertMaterial({ color: 0x0000ff });
 		const box1 = new THREE.Mesh(geometry1, material1);
 		box1.position.set(1,0,0);
 		group.add(box1)
