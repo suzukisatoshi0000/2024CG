@@ -30,13 +30,13 @@
 		scene.add(directionalLight);
 
 		//グループを作る
-		const group = new THREE.Group();
+		var group = new THREE.Group();
 		//3D空間にグループを追加
 		scene.add(group);
 
-		const geometry = new THREE.BoxGeometry(0.1, 0.1, 0.1);
-		const material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-		const box = new THREE.Mesh(geometry, material);
+		var geometry = new THREE.BoxGeometry(0.1, 0.1, 0.1);
+		var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+		var box = new THREE.Mesh(geometry, material);
 		box.position.set(1,1,1);
 		group.add(box);
 
