@@ -11,8 +11,8 @@
 <body>
 <script>
 	var init = function() {
-		var width = 1200,
-			height = 900;
+		var width = 1000,
+			height = 750;
 		// レンダラーを作成
 		var renderer = new THREE.WebGLRenderer();
 		renderer.setSize(width, height);
@@ -23,7 +23,7 @@
 		
 		// カメラを作成
 		var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
-		camera.position.set(4,4,4);
+		camera.position.set(6,6,6);
 		camera.lookAt(0,0,0);
 		
 		// スポットライト
