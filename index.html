@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
  <meta charset="UTF-8">
- <title>Demo</title>
+ <title>タイトル</title>
  <!-- three.jsを読み込む(ローカル) -->
  <!-- <script src="./three.js"></script> -->
  <!-- three.jsを読み込む(CDN) -->
@@ -17,14 +17,22 @@
 		var renderer = new THREE.WebGLRenderer();
 		renderer.setSize(width, height);
 		document.body.appendChild(renderer.domElement);
+		
 		// シーンを作成
 		var scene = new THREE.Scene();
+		
 		// カメラを作成
 		var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
+		
 		// 平行光源
-		var directionalLight = new THREE.DirectionalLight(0xffffff);
-		directionalLight.position.set(1, 1, 1);
-		scene.add(directionalLight);
+		var directionalLight1 = new THREE.DirectionalLight(0xffffff);
+		directionalLight1.position.set(1, 1, 1);
+		scene.add(directionalLight1);
+
+		var directionalLight2 = new THREE.DirectionalLight(oxffffff);
+		directionalLight2.position.set(-1,1,1);
+		scene.add(directionalLight2);
+		
 		// 箱を作成
 		var geometry = new THREE.BoxGeometry(1, 1, 1);
 		var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
