@@ -57,7 +57,7 @@
 
 		//cylinder
 		const cylinderGeometry = new THREE.CylinderGeometry(0.1,0.1,10);
-		const cylinderMaterial = new THREE.MeshToonMaterial( {color: 0xb0c4de} );
+		const cylinderMaterial = new THREE.MeshLambertMaterial({color: 0xb0c4de} );
 		const cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
 		cylinder.position.set(0,0,0);
 		scene.add(cylinder);
