@@ -26,14 +26,14 @@
 		camera.position.set(6,6,6);
 		camera.lookAt(0,0,0);
 		
-		// スポットライト
-		var directionalLight = new THREE.SpotLight(0xffffff, 4, 30, Math.PI / 4, 10, 0.5);
-		directionalLight.position.set(0, 0, 3);
-		scene.add(directionalLight);
-		directionalLight.position.set(3, 0, 0);
-		scene.add(directionalLight);
-		directionalLight.position.set(1.5, 3, 1.5);
-		scene.add(directionalLight);
+		// 光源
+		var pointLight = new THREE.PointLight(0xffffff, 4, 30, Math.PI / 4, 10, 0.5);
+		pointLight.position.set(0, 0, 3);
+		scene.add(pointLight);
+		pointLight.position.set(3, 0, 0);
+		scene.add(pointLight);
+		pointLight.position.set(1.5, 3, 1.5);
+		scene.add(pointLight);
 		
 
 		//group
