@@ -25,9 +25,9 @@
 		var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
 		
 		// 平行光源
-		var directionalLight1 = new THREE.DirectionalLight(0xffffff);
-		directionalLight1.position.set(2, 2, 2);
-		scene.add(directionalLight1);
+		var directionalLight = new THREE.DirectionalLight(0xffffff);
+		directionalLight.position.set(2, 2, 2);
+		scene.add(directionalLight);
 
 		//グループを作る
 		const group = new THREE.Group();
