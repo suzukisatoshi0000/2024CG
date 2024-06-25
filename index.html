@@ -25,13 +25,9 @@
 		var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
 		
 		// 平行光源
-		var directionalLight1 = new THREE.DirectionalLight(0xffffff);
+		var directionalLight1 = new THREE.SpotLight(0xffffff);
 		directionalLight1.position.set(1, 1, 1);
 		scene.add(directionalLight1);
-
-		var directionalLight2 = new THREE.DirectionalLight(oxffffff);
-		directionalLight2.position.set(-1,1,1);
-		scene.add(directionalLight2);
 		
 		// 箱を作成
 		var geometry = new THREE.BoxGeometry(1, 1, 1);
