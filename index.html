@@ -25,7 +25,7 @@
 		var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
 		
 		// 平行光源
-		var directionalLight1 = new THREE.SpotLight(0xffffff);
+		var directionalLight1 = new THREE.DirectionalLight(0xffffff);
 		directionalLight1.position.set(1, 1, 1);
 		scene.add(directionalLight1);
 		
@@ -35,6 +35,13 @@
 		var box = new THREE.Mesh(geometry, material);
 		box.position.z = -5;
 		scene.add(box);
+
+		// 平面を作成
+		var geometry = new THREE.PlaneGeometry(1,2,3);
+		var material = new THREE.MeshPhongMaterial( {color: 0x0000ff, side:THREE.DoubleSide} );
+		var plane = new THREE.Mesh( geometry, material );
+		plane.position.z = -5;
+		scene.add( plane );
 
 		var update = function(){
 			requestAnimationFrame(update);
