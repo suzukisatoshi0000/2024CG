@@ -28,16 +28,11 @@
 		var directionalLight = new THREE.DirectionalLight(0xffffff);
 		directionalLight.position.set(1, 1, 1);
 		scene.add(directionalLight);
-
-		//グループを作る
-		var group = new THREE.Group();
 		
-
 		var geometry = new THREE.BoxGeometry(1, 1, 1);
 		var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
 		var box = new THREE.Mesh(geometry, material);
-		box.position.set(1,1,1);
-		group.add(box);
+		box.position.set(0,0,1);
 		scene.add(group);
 
 		
