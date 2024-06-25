@@ -32,22 +32,28 @@
 		scene.add(directionalLight);
 
 		//group
-		const group1 = new THREE.Group();
-		group1.position.set(1,0,0)
-		scene.add(group1);
+		const group = new THREE.Group();
+		group.position.set(0,0,0)
+		scene.add(group);
 		
-		const geometry = new THREE.BoxGeometry(2, 3, 3);
-		const material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-		const box = new THREE.Mesh(geometry, material);
-		box.position.set(0,0,0);
-		group1.add(box)
+		const geometry1 = new THREE.BoxGeometry(2, 3, 3);
+		const material1 = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+		const box1 = new THREE.Mesh(geometry1, material1);
+		box.position.set(1,0,0);
+		group.add(box1)
+
+		const geometry2 = new THREE.BoxGeometry(1,3,3);
+		const material2 = new THREE.MeshLambertMaterial({color:0x6699FF});
+		const box2 = new THREE.Mesh(geometry2, material2);
+		box.position.set(-0.5,0,0);
+		group.add(box2);
 
 		
 		var update = function(){
 			requestAnimationFrame(update);
 			// 箱を回転させる
-			group1.rotation.x += 0.01;
-			group1.rotation.y += 0.01;
+			group.rotation.x += 0.01;
+			group.rotation.y += 0.01;
 			renderer.render(scene, camera);
 		};
 		update();
