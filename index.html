@@ -35,14 +35,14 @@
 		var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
 		var box = new THREE.Mesh(geometry, material);
 		box.position.set(0,0,1);
-		scene.add(group);
+		scene.add(box);
 
 		
 		var update = function(){
 			requestAnimationFrame(update);
 			// 箱を回転させる
-			group.rotation.x += 0.01;
-			group.rotation.y += 0.01;
+			box.rotation.x += 0.01;
+			box.rotation.y += 0.01;
 			renderer.render(scene, camera);
 		};
 		update();
