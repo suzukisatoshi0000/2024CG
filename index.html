@@ -33,18 +33,19 @@
 		const group = new THREE.Group();
 		//3D空間にグループを追加
 		scene.add(group);
-		
-		// 箱を作成
-		var geometry = new THREE.BoxGeometry(0.1, 0.1, 0.1);
-		var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-		var box1 = new THREE.Mesh(geometry, material);
-		box1.position.set(1,1,1);
-		scene.add(box1);
-		group.add(box1);
-		
-		
-		
 
+		for(let i=-1;i<2;i++){
+			for(let j=-1;i<2;i+2){
+				for(let k=-1;k<2;i++){
+					const geometry = new THREE.BoxGeometry(0.1, 0.1, 0.1);
+					const material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+					const box = new THREE.Mesh(geometry, material);
+					box.position.set(i, j, k);
+					group.add(box);
+				}
+			}
+		}
+		
 		var update = function(){
 			requestAnimationFrame(update);
 			// 箱を回転させる
