@@ -38,7 +38,11 @@
 		pointLight.position.set(1.5, 3, 1.5);
 		scene.add(pointLight);
 		
-		
+		//テクスチャー読み込み
+		const textureLoader = new THREE.textureLoader();
+		const texture = textureLoader.load("cit.png");
+		const material3 = new THREE.MeshPhongMaterial();
+		material3.map = texture;
 
 		//group
 		const group = new THREE.Group();
@@ -62,7 +66,7 @@
 		
 		//box3
 		const geometry3 = new THREE.BoxGeometry(2,2,2);
-		const box3 = new THREE.Mesh(geometry3, material2);
+		const box3 = new THREE.Mesh(geometry3, material3);
 		box3.position.set(0,3.5,0);
 		scene.add(box3);
 
