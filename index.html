@@ -59,15 +59,10 @@
 		box2.position.set(-1,0,0);
 		group.add(box2);
 
-		//テクスチャー読み込み
-		const textureLoader = new THREE.textureLoader();
-		const texture = textureLoader.load("cit.png");
-		const mat = new THREE.MeshPhongMaterial();
-		mat.map = texture;
-
+		
 		//box3
 		const geometry3 = new THREE.BoxGeometry(2,2,2);
-		const box3 = new THREE.Mesh(geometry3, mat);
+		const box3 = new THREE.Mesh(geometry3, matirial2);
 		box3.position.set(0,3,0);
 		scene.add(box3);
 
