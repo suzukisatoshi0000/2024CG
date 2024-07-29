@@ -57,14 +57,14 @@
 		group.add(box2);
 
 		//テクスチャー読み込み
-		const textureLoader = new THREE.textureLoader();
-		const texture = textureLoader.load("cit.png");
-		const mat = new THREE.MeshPhongMaterial();
+		var textureLoader = new THREE.textureLoader();
+		var texture = textureLoader.load("cit.png");
+		var mat = new THREE.MeshPhongMaterial();
 		mat.map = texture;
 
 		//box3
-		const geometry3 = new THREE.BoxGeometry(2,2,2);
-		const box3 = new THREE.Mesh(geometry3, mat);
+		var geometry3 = new THREE.BoxGeometry(2,2,2);
+		var box3 = new THREE.Mesh(geometry3, mat);
 		box3.position.set(0,3,0);
 		scene.add(box3);
 
@@ -80,6 +80,7 @@
 			// 箱を回転させる
 			group.rotation.y += 0.01;
 			box2.rotation.x += 0.02;
+			box3.rotation.y += 0.01;
 			renderer.render(scene, camera);
 		};
 		update();
