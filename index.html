@@ -57,9 +57,9 @@
 		group.add(box2);
 
 		//テクスチャー読み込み
-		var textureLoader = new THREE.textureLoader();
-		var texture = textureLoader.load("cit.png");
-		var mat = new THREE.MeshPhongMaterial();
+		const textureLoader = new THREE.textureLoader();
+		const texture = textureLoader.load("cit.png");
+		const mat = new THREE.MeshPhongMaterial();
 		mat.map = texture;
 
 		//box3
