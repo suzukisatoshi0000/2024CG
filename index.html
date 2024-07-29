@@ -17,6 +17,9 @@
 		var renderer = new THREE.WebGLRenderer();
 		renderer.setSize(width, height);
 		document.body.appendChild(renderer.domElement);
+
+		//背景の色を設定
+		renderer.setClearColor(0xffffdd);
 		
 		// シーンを作成
 		var scene = new THREE.Scene();
@@ -57,14 +60,14 @@
 		group.add(box2);
 
 		//テクスチャー読み込み
-		var textureLoader = new THREE.textureLoader();
-		var texture = textureLoader.load("cit.png");
-		var mat = new THREE.MeshPhongMaterial();
+		const textureLoader = new THREE.textureLoader();
+		const texture = textureLoader.load("cit.png");
+		const mat = new THREE.MeshPhongMaterial();
 		mat.map = texture;
 
 		//box3
-		var geometry3 = new THREE.BoxGeometry(2,2,2);
-		var box3 = new THREE.Mesh(geometry3, mat);
+		const geometry3 = new THREE.BoxGeometry(2,2,2);
+		const box3 = new THREE.Mesh(geometry3, mat);
 		box3.position.set(0,3,0);
 		scene.add(box3);
 
